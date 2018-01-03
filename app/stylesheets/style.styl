@@ -1,0 +1,51 @@
+@require "helpers"
+
+@font-face
+  font-family 'BigJohn'
+  src url("../fonts/Big John.otf") format("opentype")
+  
+@font-face
+  font-family 'SlimJoe'
+  src url("../fonts/Slim Joe.otf") format("opentype")
+  
+body
+	height 100vh
+	margin 0
+	width 100vw
+
+.navbar
+	border-bottom solid 8px $mainColor
+	display flex
+	flex-direction row
+	height 8%
+
+.name-box
+	align-items center
+	background-color $mainColor
+	
+.name-box, .page-title-box
+	display flex
+	flex 2
+	flex-direction column
+	justify-content center
+	
+.name-text
+	color $white
+	font-size 30px
+
+.name-text, .page-title-text
+	font-family 'SlimJoe'
+	text-decoration none
+		
+.page-title-box
+	align-items center
+	flex 1
+	
+.page-title-text
+	color $secondaryColor
+	font-size 15px
+
+.page-content
+	display flex
+	flex-direction column
+	height 92%
