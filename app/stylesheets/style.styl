@@ -9,43 +9,47 @@
   src url("../fonts/Slim Joe.otf") format("opentype")
   
 body
+	display flex
+	flex-direction row
+	font-family 'SlimJoe'
 	height 100vh
 	margin 0
 	width 100vw
 
 .navbar
-	border-bottom solid 8px $mainColor
 	display flex
-	flex-direction row
-	height 8%
+	flex 1
+	flex-direction column
+	height 40%
+	width 100px
 
-.name-box
-	align-items center
+.active
 	background-color $mainColor
+	padding-left 5px
+
+.active-text
+	color $white
+	font-size 20px
+	text-decoration none
 	
 .name-box, .page-title-box
+	border-left solid 15px $mainColor
 	display flex
-	flex 2
+	flex 1
 	flex-direction column
 	justify-content center
-	
-.name-text
-	color $white
-	font-size 30px
+	margin-bottom 2px
+	padding-left 5px
 
-.name-text, .page-title-text
-	font-family 'SlimJoe'
-	text-decoration none
-		
-.page-title-box
-	align-items center
-	flex 1
-	
-.page-title-text
+.inactive-text
 	color $secondaryColor
 	font-size 15px
+	text-decoration none
+
+.inactive-text:hover
+	font-size 20px
 
 .page-content
 	display flex
+	flex 4
 	flex-direction column
-	height 92%

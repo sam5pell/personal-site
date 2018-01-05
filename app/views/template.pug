@@ -9,14 +9,14 @@ html
   
   body
     .navbar
-      .name-box
-        a(class='name-text' href='/') Sam Pelletier
-      .page-title-box 
-        a(class='page-title-text' href='/projects') Projects
-      .page-title-box
-        .page-title-text Thing 2
-      .page-title-box
-        .page-title-text Thing 3
+      .name-box(class= (active === 'index') ? 'active' : '')
+        a(class=(active === 'index') ? 'active-text' : 'inactive-text' href='/') Sam Pelletier
+      .page-title-box(class= (active === 'projects') ? 'active' : '')
+        a(class=(active === 'projects') ? 'active-text' : 'inactive-text' href='/projects') Projects
+      .page-title-box(class= (active === 'thing2') ? 'active' : '')
+        a(class=(active === 'thing2') ? 'active-text' : 'inactive-text' href='/projects') Thing 2
+      .page-title-box(class= (active === 'thing3') ? 'active' : '')
+        a(class=(active === 'thing3') ? 'active-text' : 'inactive-text' href='/projects') Thing 3
 
   .page-content 
     block content
